@@ -9,7 +9,7 @@ public class RevealCharacters {
 
     public String reveal(char guessedChar) {
         boolean revealed = false;
-        System.out.println(guessedChar);
+
         for (int i = 0; i < hiddenMovie.length(); i++) {
             if (hiddenMovie.charAt(i) == guessedChar) {
                 revealedMovie.setCharAt(i, guessedChar);
@@ -17,10 +17,11 @@ public class RevealCharacters {
             }
         }
         if (revealed) {
-            System.out.println("yes");
-            return revealedMovie.toString();
+            System.out.println(guessedChar);
         } else {
             return null;
         }
+        System.out.println(revealedMovie);
+            return revealedMovie.toString();
     }
 }
